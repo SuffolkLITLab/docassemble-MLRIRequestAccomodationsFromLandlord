@@ -45,7 +45,7 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
 
 setup(name='docassemble.MLRIRequestAccomodationsFromLandlord',
       version='1.0',
-      description=('Request Accommodations from Landlord'),
+      description=('A Docassemble Interview to Request Accommodations from Landlord'),
       long_description='# docassemble.Requestaccomodationsfromlandlord\r\n\r\nRequestAccomodationsfromLandlord\r\n\r\n## Author\r\n\r\nKP Hunsinger\r\n\r\n',
       long_description_content_type='text/markdown',
       author='KP Hunsinger',

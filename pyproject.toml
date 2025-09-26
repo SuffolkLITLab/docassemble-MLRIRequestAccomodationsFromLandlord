@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "docassemble.MLRIRequestAccomodationsFromLandlord"
 version = "1.0"
-description = "Request Accommodations from Landlord"
+description = "A Docassemble Interview to Request Accommodations from Landlord"
 readme = "README.md"
 authors = [
     { name = "KP Hunsinger", email = "wkh06781@su.suffolk.edu" },
