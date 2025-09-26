@@ -83,6 +83,7 @@ code: |
   users.gather()
   set_parts(subtitle=str(users))
   request_subject
+  subject_ref
   users[0].phone_number
   set_progress(25)
   signature_date
@@ -138,16 +139,23 @@ subquestion: |
   What type of accommodation(s) are you requesting?
 fields:
   - "Request subject": request_subject
-    input type: dropdown
     choices:
-      - Myself
-      - Member of my Household
+      - Me: user
+      - Member of my Household: household_member
   - "Request body": request_body
     datatype: combobox
     choices:
       - Assistance Animal
       - Reserved Parking Space
       - Alternative Rent Due Date
+---
+
+code: |
+  if request_subject == user:
+    subject_ref = "I am"
+  elif request_subject == household_member:
+    subject_ref = "a member of my household is"
+  else: subject_ref = "a member of my household is"
 ---
 id: preview requestaccomodationsfromlandlord
 question: |
@@ -273,6 +281,3 @@ attachment:
   skip undefined: True
   docx template file: requestaccomodationsfromlandlord.docx
   tagged pdf: True
-
-
-
